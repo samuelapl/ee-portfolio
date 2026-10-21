@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+/* index.css or custom styles */
+body {
+  background-color: #111827;
+  color: #ffffff; /* Set text color to white for visibility */
+  font-family: 'Poppins', sans-serif
+
+}
+
+::selection {
+  color: #fff;
+  background-color: #ffb43a;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffb43a;
+  border-radius: 10px;
+}
+/* Add these styles to your CSS */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  animation: slide 20s linear infinite;
+  width: max-content;
+}
+
+.hover\:animation-paused:hover {
+  animation-play-state: paused;
+}
+
+/* Optional: Adjust animation speed on mobile */
+@media (max-width: 640px) {
+  .animate-slide {
+    animation-duration: 30s;
+  }
+}
